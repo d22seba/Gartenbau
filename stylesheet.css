@@ -278,7 +278,7 @@
 }
 
 .slider{
-    height: auto; 
+    max-height: 300px;
     width: fit-content;
     border-color: transparent;
     border-radius: 10px;
