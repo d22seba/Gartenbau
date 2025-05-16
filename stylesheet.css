@@ -1,6 +1,7 @@
 *{
     -webkit-user-drag: none;
 }
+
 #banner{
     width: 100%;
     height: 75px;
@@ -45,63 +46,76 @@
 /* Infos und Bild /*/
 
 #infocontainer{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    height: 70vh;
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    gap: 60px;
+}
+
+#arwedinfo{
     display: flex; 
     flex-direction: row;
-}
-#arwedinfo{
+    position: relative;
     scroll-margin-top: 255px;
     border: 3px solid rgba(0, 0, 0, 0.349);
     border-radius: 40px;
     background-color: #504B3A; 
     width: auto; 
+    height: auto;
     justify-self: left; 
     border-radius: 10px; 
+
 }
-#text{
-    font-family: Arial, Helvetica, sans-serif;
-    height: 300px; 
-    width: 500px;
-    padding-right: 20px;
-    margin-left: 25px;
-    font-size: 20px;
-    text-align: center;
-    align-self: center;
-}
+
+
 #arwed{
+    align-self: center;
     border: 1px solid black;
     border-radius: 10px;
-    height: 500px; 
-    width: 400px;
+    height: 80%; 
+    width: 45%;
     margin-left: 40px;
 }
 
-#arwedinfo > div{
-    display: flex; 
-    flex-direction: row;
-
+#text{
+    
+    font-size: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-right: 20px;
+    margin-left: 25px;
+    text-align: center;
+    align-self: center;
 }
+
+
+
 
 
 
 #info{
+
     align-self: center;
-    margin-left: 2cm;
     padding: 40px;
     color: white;
     border: 6px solid #504B3A;
     border-radius: 40px;
     height: auto;
-    width: fit-content;
-    max-width: 380px;
+    width: 35%;
+    max-width: 380px;                   
+    box-sizing: border-box;             
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
  }
 
  #info > p{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
     color: white;
-    margin: 0;
     padding-top: 4px;
  }
 
@@ -112,6 +126,12 @@
     transform: scale(1.07);
     transition: 0.2s;
 
+}
+
+.buttoncontainer{
+    display: flex;
+    justify-content: center;
+    
 }
 
 .dienstleistungencontainer > div > div > div > img{
@@ -156,7 +176,7 @@
 #heckenschnitt > img{
 
     border: 1px solid black;
-    width: 800px;
+    width: 100%;
     height: auto;
     
 }
@@ -175,7 +195,7 @@
 #baumpflege > img{
 
     border: 1px solid black;
-    width: 800px;
+    width: 100%;
     height: auto;
     
 }
@@ -194,7 +214,7 @@
 #baumfällung > img{
 
     border: 1px solid black;
-    width: 800px;
+    width: 100%;
     height: auto;
     
 }
@@ -213,7 +233,7 @@
 #bepflanzung > img{
 
     border: 1px solid black;
-    width: 800px;
+    width: 100%;
     height: auto;
     
 }
@@ -232,7 +252,7 @@
 #pflastern > img{
 
     border: 1px solid black;
-    width: 800px;
+    width: 100%;
     height: auto;
     
 }
@@ -255,6 +275,19 @@
 #projekte > h3{
     align-self: center;
     color: white;
+}
+
+.slider{
+    height: auto; 
+    width: fit-content;
+    border-color: transparent;
+    border-radius: 10px;
+}
+
+.slider:active,
+.slider:focus,
+.slider:focus-visible {
+  outline: none;
 }
 
 #vornacher{
@@ -281,15 +314,17 @@
     color: white;
 }
 #bildervornachcontainer{
+    height: auto;
     align-self: center;
-    display: flex; 
-    flex-direction: row; 
+    display: flex;
+    flex-direction: row;
     gap: 100px;
+    color: white;
 }
 
 .bildvornach{
     height: auto;
-    width: 50%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     align-self: center;
@@ -297,17 +332,21 @@
     gap: 25px;
 }
 
+
 .bildvornach > h1{
     color: white;
+}
+
+.bildvornach > p{
+    opacity: 0.3;
 }
 
 .bild{
     border: 1px solid rgb(0, 0, 0);
     border-radius: 10px;
-    height: 300px;
-    width: 650px;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
-    display: block;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -352,10 +391,11 @@
 
 
 
-@media (max-width: 760px) {
+@media (max-width: 1000px) {
 
     body{
         flex-direction: column;
+        margin: 0;
     }
 
     #banner{
@@ -363,13 +403,13 @@
     }
 
     #navbar {
+        
+      border-radius: 0;
+      border: 0;
       flex-direction: column;
       align-items: center;
       position: static; 
-      width: 100%; 
-      left: 0;
-      top: 0;
-      border-radius: 0; 
+      width: 100%;  
     }
   
     #navbar > ul {
@@ -431,6 +471,10 @@
       font-size: 16px;
     }
   
+    .buttoncontainer{
+        width: fit-content;
+    }
+
     .btn-group {
         display: flex;
         flex-direction: column;
@@ -439,10 +483,11 @@
     
       .btn-group > a {
         width: 100%;
-        margin-bottom: 6px;
+        margin-bottom: 30px;
       }
     
       .btn-group > a > button {
+
         width: 100%;
         box-sizing: border-box;
       }
@@ -534,6 +579,7 @@
         display: flex; 
         flex-direction: column; 
         gap: 100px;
+        color: white;
     }
     
     .bildvornach{
@@ -551,6 +597,11 @@
         color: white;
     }
     
+    .slider{
+        height: auto;
+        width: 100%;
+    }
+
     .bild{
         
         border: 4px solid black;
@@ -559,6 +610,7 @@
         width: 100%;
         object-fit: cover;
         display: block;
+        max-height: 191px;
     }
 
     #impressum {
