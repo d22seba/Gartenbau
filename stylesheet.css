@@ -277,6 +277,8 @@
     color: white;
 }
 
+/* Vorher Nachher Vergleiche */
+
 .slider{
     max-height: 300px;
     width: fit-content;
@@ -376,7 +378,8 @@
     justify-content: center;
     text-align: center;
 }
-/* Footer /*/
+
+/* Zusatz damit man bisschen weiter scrollen kann /*/
 
 #drag{
     height: 50px;
@@ -390,6 +393,7 @@
 
 
 
+/* Stylesheet für den mobile modus */
 
 @media (max-width: 1000px) {
 
