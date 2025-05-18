@@ -473,8 +473,10 @@
   
     .buttoncontainer{
         width: fit-content;
+        justify-self: center;
+        margin-left: -20px;
     }
-
+    
     .btn-group {
         display: flex;
         flex-direction: column;
@@ -487,7 +489,6 @@
       }
     
       .btn-group > a > button {
-
         width: 100%;
         box-sizing: border-box;
       }
