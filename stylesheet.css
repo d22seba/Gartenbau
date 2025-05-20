@@ -5,17 +5,17 @@
 #banner{
     width: 100%;
     height: 75px;
-    background-color: #C1B4AE;
+    background-color: #4d361cc0;
 }
 
 /* CSS für die Navbar /*/
 #navbar{
 
-    background-color: #C1B4AE; 
+    background-color: #4d361ce3; 
     z-index: 1; 
     border: 4px solid ;
     border-radius: 10px;
-    border-color:  #504B3A;
+    border-color:  #302d25;
     height: auto; 
     width: auto; 
     position: fixed; 
@@ -166,18 +166,17 @@
 #heckenschnitt{
     
     scroll-margin-top: 100px;
-    margin-left: 0px;
     margin-top: 110px;
     height: auto;
     width: auto;
-    min-width: 500px;
+    max-width: 700px;
     border-radius: 10px; 
 } 
 
 #heckenschnitt > img{
 
     border: 1px solid black;
-    width: 100%;
+    width: 500px;
     height: auto;
     
 }
@@ -208,9 +207,8 @@
     margin-top: 110px;
     height: auto;
     width: auto;
-    min-width: 500px;
+    max-width: 700px;
     border-radius: 10px; 
-    margin-right: 100px;
 
 } 
 
@@ -385,21 +383,41 @@
 
 /* Zusatz damit man bisschen weiter scrollen kann /*/
 
-#drag{
+#footer{
+    justify-content: center;
     display: flex;
     flex-direction: row;
     margin-top: 30px;
-    background-color: green;
-    height: 80px;
+    background-color: #1d2b0f67;
+    height: 8vh;
     width: 100%;
+    border-top: 1px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-#drag > img{
+#logofooter{
+    margin: 0px 20px;
     align-self: center;
-    height: 50%;
+    height: 60%;
     width: auto;
 }
 
+#instabutton{
+    color: white;
+}
+
+#instabutton :hover{
+    color: rgb(223, 223, 223);
+}
+
+#footer > p {
+    text-align: center;
+    color: #eee;                
+    font-size: 14px;             
+    font-family: Arial, sans-serif;
+    margin: 0;                   
+    user-select: none;           
+}
   
 
 @media (max-width: 1200px){
@@ -422,6 +440,7 @@
         font-size: 0.8em;
     }
 } 
+
 
 
 
@@ -536,19 +555,21 @@
       #baumfällung,
       #bepflanzung,
       #pflastern {
+        min-width: none;
         flex-direction: column;
         align-items: center;
         margin-left: 0;
         margin-top: 30px;
         width: 100%;
         text-align: center; 
-      }
+    }
     
-      #heckenschnitt > img,
-      #baumpflege > img,
-      #baumfällung > img,
-      #bepflanzung > img,
-      #pflastern > img {
+    #heckenschnitt > img,
+    #baumpflege > img,
+    #baumfällung > img,
+    #bepflanzung > img,
+    #pflastern > img {
+        min-width: none;
         width: 90%; 
         height: auto;
         margin-bottom: 10px;
