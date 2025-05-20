@@ -381,7 +381,7 @@
     text-align: center;
 }
 
-/* Zusatz damit man bisschen weiter scrollen kann /*/
+/* Der Footer /*/
 
 #footer{
     justify-content: center;
@@ -424,7 +424,7 @@
 
 
     #arwedinfo{
-        height: fit-content;
+        height: auto;
         padding: 70px 0px;
     }
 
@@ -433,7 +433,7 @@
         border: 1px solid black;
         border-radius: 10px;
         height: auto; 
-        width: 50%;
+        width: 45%;
         margin-left: 40px;
     }
     #text{
